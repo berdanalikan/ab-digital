@@ -1,4 +1,4 @@
-# ab digital
+# pek digital
 
 Tek sayfalı statik web sitesi.
 
