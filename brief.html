@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ab-digital — Brief Formu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { bg:'#0b0b0e', surface:'#111216', primary:'#ff3d00', accent:'#7c3aed' }}}}
+  </script>
+  <style>
+    .btn{position:relative;display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.1rem;border-radius:.75rem;border:1px solid rgba(255,255,255,.08);transition:.2s ease}
+    .btn-primary{background:linear-gradient(135deg,#ff3d00,#ff6a33);color:#0b0b0e;border-color:transparent}
+    .brand{ position:relative; display:inline-block }
+    .l-wrap{ position:relative; display:inline-block }
+    .brand-star{ position:absolute; top:-0.12em; right:-0.39em; color:#ff3d00; font-size:1.15em; line-height:1 }
+  </style>
+</head>
+<body class="bg-bg text-white antialiased">
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-bg/70 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-lg font-semibold tracking-tight" aria-label="beebloo digital ana sayfa"><span class="brand"><em>beebloo</em> digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-300">
+        <a href="index.html" class="hover:text-primary">Anasayfa</a>
+        <a href="services.html" class="hover:text-primary">Hizmetler</a>
+        <a href="portfolio.html" class="hover:text-primary">Portföy</a>
+        <a href="process.html" class="hover:text-primary">Süreç</a>
+        <a href="brief.html" class="btn btn-primary ml-2" style="background:linear-gradient(135deg,#ff3d00,#ff6a33);color:#0b0b0e;border:0">Teklif Alın</a>
+      </nav>
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-white/10" aria-label="Menüyü Aç/Kapat">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-zinc-300"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+  <div id="mobileNav" class="md:hidden hidden fixed top-16 inset-x-0 z-50 border-b border-white/5 bg-bg/95 backdrop-blur shadow-lg max-h-[80vh] overflow-y-auto">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2 text-sm text-zinc-300">
+      <a href="index.html" class="py-2 hover:text-primary">Anasayfa</a>
+      <a href="services.html" class="py-2 hover:text-primary">Hizmetler</a>
+      <a href="portfolio.html" class="py-2 hover:text-primary">Portföy</a>
+      <a href="process.html" class="py-2 hover:text-primary">Süreç</a>
+      <a href="brief.html" class="btn btn-primary mt-2">Teklif Alın</a>
+    </div>
+  </div>
+
+  <main class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">Proje Brief Formu</h1>
+      <p class="text-zinc-400 mb-8">İhtiyaçlarınıza uygun bir teklif hazırlayabilmemiz için lütfen formu detaylıca doldurun.</p>
+
+      <form id="briefForm" class="grid md:grid-cols-2 gap-6">
+        <input type="hidden" name="access_key" value="a7fb8587-e443-4877-8905-3e8218abdc1f" />
+        <input type="hidden" name="from_name" value="ab digital — Teklif Formu" />
+        <input type="hidden" name="subject" value="Yeni Teklif Talebi" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+        <!-- Kişisel/Şirket Bilgileri -->
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-semibold mb-3">Temel Bilgiler</h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            <input required name="name" placeholder="Ad Soyad *" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary" />
+            <input required type="email" name="email" placeholder="E‑posta *" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary" />
+            <input required type="tel" name="phone" placeholder="Telefon *" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary" />
+            <input required name="company" placeholder="Şirket Adı *" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary" />
+            <input name="website" placeholder="Mevcut Web Sitesi (varsa) https://" class="md:col-span-2 w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary" />
+          </div>
+        </div>
+
+        <!-- Proje Kapsamı -->
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-semibold mb-3">Proje Kapsamı</h2>
+          <div class="grid md:grid-cols-3 gap-3 text-sm">
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="scope" value="Kurumsal Web"> Kurumsal Web</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="scope" value="E‑ticaret"> E‑ticaret</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="scope" value="Landing Page"> Landing Page</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="scope" value="Blog/İçerik"> Blog/İçerik</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="scope" value="Portal/SaaS"> Portal/SaaS</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="scope" value="Diğer"> Diğer</label>
+          </div>
+        </div>
+
+        <!-- Tasarım Tercihi -->
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-semibold mb-3">Tasarım Tercihi</h2>
+          <div class="flex flex-wrap gap-4 text-sm">
+            <label class="inline-flex items-center gap-2"><input type="radio" name="style" value="Minimal" required> Minimal</label>
+            <label class="inline-flex items-center gap-2"><input type="radio" name="style" value="Kurumsal"> Kurumsal</label>
+            <label class="inline-flex items-center gap-2"><input type="radio" name="style" value="Yaratıcı"> Yaratıcı</label>
+            <label class="inline-flex items-center gap-2"><input type="radio" name="style" value="Karanlık"> Karanlık</label>
+            <label class="inline-flex items-center gap-2"><input type="radio" name="style" value="Aydınlık"> Aydınlık</label>
+          </div>
+        </div>
+
+        <!-- İçerik & Marka -->
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-semibold mb-3">İçerik & Marka</h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            <select required name="content" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary">
+              <option value="">İçerik durumu *</option>
+              <option>İçerikler hazır</option>
+              <option>İçerikler kısmen hazır</option>
+              <option>İçerik üretimi gerekiyor</option>
+            </select>
+            <select required name="branding" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary">
+              <option value="">Marka/Logo durumu *</option>
+              <option>Logo ve kurumsal kimlik hazır</option>
+              <option>Logo hazır, kurumsal kimlik yok</option>
+              <option>Logo/kimlik çalışması gerekiyor</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Özellikler -->
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-semibold mb-3">Özellikler</h2>
+          <div class="grid md:grid-cols-3 gap-3 text-sm">
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="features" value="Çok Dilli"> Çok Dilli</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="features" value="Blog"> Blog</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="features" value="Üyelik"> Üyelik</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="features" value="Ödeme"> Ödeme</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="features" value="Randevu"> Randevu</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="features" value="Canlı Sohbet"> Canlı Sohbet</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="features" value="Formlar"> Formlar</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="features" value="Harita"> Harita</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="features" value="Galeri"> Galeri</label>
+          </div>
+        </div>
+
+        <!-- Teknik Entegrasyonlar -->
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-semibold mb-3">Teknik Entegrasyonlar</h2>
+          <div class="grid md:grid-cols-3 gap-3 text-sm">
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="integrations" value="Ödeme"> Ödeme</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="integrations" value="Kargo"> Kargo</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="integrations" value="CRM"> CRM</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="integrations" value="Analitik"> Analitik</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="integrations" value="Pazarlama"> Pazarlama (Meta/Google)</label>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="integrations" value="Canlı Sohbet"> Canlı Sohbet</label>
+          </div>
+        </div>
+
+        <!-- Bütçe & Zaman -->
+        <div class="grid md:grid-cols-2 gap-4 md:col-span-2">
+          <select required name="budget" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary">
+            <option value="">Bütçe aralığı *</option>
+            <option>₺20.000–₺40.000</option>
+            <option>₺40.000–₺80.000</option>
+            <option>₺80.000–₺150.000</option>
+            <option>₺150.000+</option>
+          </select>
+          <select required name="timeline" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary">
+            <option value="">Teslim süresi *</option>
+            <option>2–4 hafta</option>
+            <option>4–8 hafta</option>
+            <option>8+ hafta</option>
+            <option>Esnek</option>
+          </select>
+        </div>
+
+        <!-- Örnekler & Detaylar -->
+        <div class="md:col-span-2">
+          <textarea name="inspo" rows="3" placeholder="Beğendiğiniz örnek siteler (linkler)…" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary mb-4"></textarea>
+          <textarea required name="details" rows="6" placeholder="Proje detayları, sayfa listesi, özel gereksinimler…" class="w-full rounded-lg bg-bg border border-white/10 px-3 py-3 outline-none focus:border-primary"></textarea>
+        </div>
+
+        <div class="md:col-span-2 space-y-3">
+          <button class="btn btn-primary w-full" type="submit">Teklif Talep Et</button>
+          <div id="formStatus" class="hidden rounded-lg border border-white/10 p-3 text-sm"></div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const form = document.getElementById('briefForm');
+    const statusBox = document.getElementById('formStatus');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form) return;
+      const data = new FormData(form);
+      try {
+        statusBox?.classList.remove('hidden');
+        statusBox.textContent = 'Gönderiliyor...';
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        const result = await res.json();
+        if (result.success) {
+          statusBox.textContent = 'Teşekkürler! Talebiniz bize ulaştı.';
+          statusBox.className = 'rounded-lg border border-green-900/40 bg-green-900/10 p-3 text-sm text-green-300';
+          form.reset();
+        } else {
+          statusBox.textContent = 'Gönderim başarısız oldu. Lütfen daha sonra tekrar deneyin.';
+          statusBox.className = 'rounded-lg border border-red-900/40 bg-red-900/10 p-3 text-sm text-red-300';
+        }
+      } catch (err) {
+        statusBox.textContent = 'Ağ hatası oluştu. Lütfen daha sonra tekrar deneyin.';
+        statusBox.className = 'rounded-lg border border-red-900/40 bg-red-900/10 p-3 text-sm text-red-300';
+      }
+      
+      // Redirect to homepage after 3 seconds on successful submission
+      if (result.success) {
+        setTimeout(function() {
+          window.location.href = 'index.html';
+        }, 3000);
+      }
+    });
+  </script>
+  <footer class="border-t border-white/5 py-12 text-sm mt-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <div class="text-zinc-300">
+        <div class="text-lg font-semibold mb-3"><span class="brand">ab digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></div>
+        <p class="text-zinc-400">Modern ve hızlı web çözümleri. Mobil öncelikli tasarım, performans odaklı geliştirme.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6 text-zinc-400">
+        <div class="space-y-2">
+          <a href="index.html" class="block hover:text-white">Anasayfa</a>
+          <a href="services.html" class="block hover:text-white">Hizmetler</a>
+          <a href="portfolio.html" class="block hover:text-white">Portföy</a>
+          <a href="process.html" class="block hover:text-white">Süreç</a>
+        </div>
+        <div class="space-y-2">
+          <a href="brief.html" class="btn btn-primary w-full text-center">Teklif Alın</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 mt-8 text-zinc-500">ab digital — Web Tasarım Ajansı. © 2025 Tüm hakları saklıdır.</div>
+  </footer>
+</body>
+</html>

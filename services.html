@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ab-digital — Hizmetler</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{bg:'#0b0b0e',surface:'#111216',primary:'#ff3d00',accent:'#7c3aed'}}}};</script>
+  <style>
+    .btn { position:relative; display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1.1rem; border-radius:.75rem; border:1px solid rgba(255,255,255,.08); transition:.2s ease; overflow:hidden }
+    .btn::before{content:""; position:absolute; inset:0; left:-120%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent); transition:left .6s ease}
+    .btn:hover::before{left:120%}
+    .btn-primary{ background:linear-gradient(135deg,#ff3d00,#ff6a33); color:#0b0b0e; border-color:transparent }
+    .card{ position:relative; transform-style:preserve-3d; transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s }
+    .hover-lift:hover{ transform:translateY(-6px) scale(1.02) }
+    .reveal{ opacity:0; transform:translateY(14px) }
+    .reveal.animate-in{ opacity:1; transform:translateY(0); transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .6s ease-out; transition-delay: var(--reveal-delay, 0s) }
+    .brand{ position:relative; display:inline-block }
+    .l-wrap{ position:relative; display:inline-block }
+    .brand-star{ position:absolute; top:-0.12em; right:-0.39em; color:#ff3d00; font-size:1.15em; line-height:1 }
+  </style>
+</head>
+<body class="bg-bg text-white antialiased">
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-bg/70 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-lg font-semibold tracking-tight" aria-label="pek digital ana sayfa"><span class="brand"><em>pek</em> digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-300">
+        <a href="index.html" class="hover:text-primary">Anasayfa</a>
+        <a href="#" class="hover:text-primary text-primary">Hizmetler</a>
+        <a href="portfolio.html" class="hover:text-primary">Portföy</a>
+        <a href="process.html" class="hover:text-primary">Süreç</a>
+        <a href="brief.html" class="btn btn-primary ml-2" style="background:linear-gradient(135deg,#ff3d00,#ff6a33);color:#0b0b0e;border:0">Teklif Alın</a>
+      </nav>
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-white/10" aria-label="Menüyü Aç/Kapat">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-zinc-300"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+  <div id="mobileNav" class="md:hidden hidden fixed top-16 inset-x-0 z-50 border-b border-white/5 bg-bg/95 backdrop-blur shadow-lg max-h-[80vh] overflow-y-auto">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2 text-sm text-zinc-300">
+      <a href="index.html" class="py-2 hover:text-primary">Anasayfa</a>
+      <a href="services.html" class="py-2 hover:text-primary">Hizmetler</a>
+      <a href="portfolio.html" class="py-2 hover:text-primary">Portföy</a>
+      <a href="process.html" class="py-2 hover:text-primary">Süreç<

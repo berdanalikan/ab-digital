@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>pek-digital — Size Özel Web Tasarım Ajansı</title>
+  <meta name="description" content="pek-digital: İşletmeniz için modern, hızlı ve SEO uyumlu web siteleri tasarlar ve geliştirir. Teklif formunu doldurun, projenizi birlikte hayata geçirelim." />
+  <meta name="theme-color" content="#0b0b0e" />
+  <link rel="icon" type="image/svg+xml" href="/images/favicon/favicon.svg" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: '#0b0b0e',
+            surface: '#111216',
+            muted: '#9ca3af',
+            primary: '#ff3d00',
+            accent: '#7c3aed',
+          },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          boxShadow: {
+            glow: '0 10px 35px rgba(0,224,184,.25)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .btn { position:relative; display:inline-flex; align-items:center; gap:.5rem; padding:.75rem 1.1rem; border-radius:.75rem; border:1px solid rgba(255,255,255,.08); transition:.2s ease; overflow:hidden }
+    .btn::before{content:""; position:absolute; inset:0; left:-120%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent); transition:left .6s ease}
+    .btn:hover::before{left:120%}
+    .btn-primary{ background:linear-gradient(135deg,#ff3d00,#ff6a33); color:#0b0b0e; border-color:transparent }
+    .btn-primary:hover{ transform:translateY(-2px); box-shadow: var(--tw-shadow, 0 0 #0000), 0 10px 30px rgba(0,224,184,.28) }
+    .btn-outline{ border-color:rgba(255,255,255,.12) }
+    .ripple{ position:absolute; border-radius:9999px; transform:scale(0); background:rgba(255,255,255,.25); animation:ripple .6s ease-out forwards; pointer-events:none }
+    @keyframes ripple{ to{ transform:scale(3); opacity:0 } }
+    /* Animations */
+    .card{ position:relative; transform-style:preserve-3d; transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s; will-change:transform }
+    .hover-lift:hover{ transform:translateY(-6px) scale(1.02) }
+    .reveal{ opacity:0; transform:translateY(14px) }
+    .reveal.animate-in{ opacity:1; transform:translateY(0); transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .6s ease-out; transition-delay: var(--reveal-delay, 0s) }
+    .card-img{ transition: transform .6s cubic-bezier(.2,.8,.2,1) }
+    .card:hover .card-img{ transform: scale(1.05) }
+    .brand{ position:relative; display:inline-block }
+    .l-wrap{ position:relative; display:inline-block }
+    .brand-star{ position:absolute; top:-0.12em; right:-0.39em; color:#ff3d00; font-size:1.15em; line-height:1 }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important }
+    }
+  </style>
+</head>
+<body class="bg-bg text-white antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-bg/70 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-lg font-semibold tracking-tight" aria-label="pek digital ana sayfa"><span class="brand"><em>pek</em> digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-300">
+        <a href="index.html" class="hover:text-primary">Anasayfa</a>
+        <a href="services.html" class="hover:text-primary">Hizmetler</a>
+        <a href="portfolio.html" class="hover:text-primary">Portföy</a>
+        <a href="process.html" class="hover:text-primary">Süreç</a>
+        <a href="brief.html" class="btn btn-primary ml-2">Teklif Alın</a>
+      </nav>
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-white/10" aria-label="Menüyü Aç/Kapat">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-zinc-300"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+  <!-- Mobile Nav -->
+  <div id="mobileNav" class="md:hidden hidden fixed top-16 inset-x-0 z-50 border-b border-white/5 bg-bg/95 backdrop-blur shadow-lg max-h-[80vh] overflow-y-auto">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2 text-sm text-zinc-300">
+      <a href="index.html" class="py-2 hover:text-primary">Anasayfa</a>
+      <a href="services.html" class="py-2 hover:text-primary">Hizmetler</a>
+      <a href="portfolio.html" class="py-2 hover:text-primary">Portföy</a>
+      <a href="process.html" class="py-2 hover:text-primary">Süreç</a>
+      <a href="brief.html" class="btn btn-primary mt-2">Teklif Alın</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="absolute inset-0 opacity-40 pointer-events-none" style="background:
+      radial-gradient(60% 60% at 50% 0%, rgba(0,224,184,.28) 0%, transparent 60%),
+      radial-gradient(40% 40% at 90% 10%, rgba(124,58,237,.28) 0%, transparent 60%)"></div>
+    <div class="max-w-5xl mx-auto px-4 pt-24 pb-14 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Hızlı. Şık. Dönüştüren.</h1>
+      <p class="mt-6 text-lg md:text-xl text-zinc-400">Markanız için net sonuç.</p>
+      <div class="mt-8 flex items-center justify-center gap-3">
+        <a href="brief.html" class="btn btn-primary">Teklif Alın</a>
+        <a href="portfolio.html" class="btn btn-outline">Portföyü Gör</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / What we do -->
+  <section class="py-16" id="services">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Ne yapıyoruz?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift hover-tilt reveal" style="--reveal-delay:.0s">
+          <h3 class="text-xl font-semibold mb-2">Web Tasarım & Geliştirme</h3>
+          <p class="text-muted">Mobil öncelikli, hızlı ve sürdürülebilir arayüzler. Next.js/TailwindCSS ile performans odaklı geliştirme.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift hover-tilt reveal" style="--reveal-delay:.05s">
+          <h3 class="text-xl font-semibold mb-2">UI/UX & Bilgi Mimarisi</h3>
+          <p class="text-muted">Kullanıcı araştırması, wireframe, prototip ve test süreçleriyle ölçülebilir deneyim tasarımı.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift hover-tilt reveal" style="--reveal-delay:.1s">
+          <h3 class="text-xl font-semibold mb-2">E‑ticaret & Entegrasyonlar</h3>
+          <p class="text-muted">Ödeme, kargo, CRM ve analitik entegrasyonları; SEO ve performans optimizasyonu.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift hover-tilt reveal" style="--reveal-delay:.15s">
+          <h3 class="text-xl font-semibold mb-2">Marka & İçerik</h3>
+          <p class="text-muted">Ton‑of‑voice, görsel dil ve içerik stratejisiyle tutarlı marka iletişimi.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 p-6 bg-surface/60">
+          <h3 class="text-xl font-semibold mb-2">Birden fazla formatta çıktı</h3>
+          <p class="text-muted">Desteklenen formatlar: TailwindCSS, TS, JS, JSON, CSS, SCSS, SASS, LESS.</p>
+        </div>
+        <div class="rounded-xl border border-white/10 p-6 bg-surface/60">
+          <h3 class="text-xl font-semibold mb-2">CI için tasarlandı</h3>
+          <p class="text-muted">Yerel veya CI — aynı komutlar, tamamen özelleştirilebilir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Süreç</h2>
+      <ol class="grid md:grid-cols-3 gap-6 list-decimal list-inside">
+        <li class="rounded-xl border border-white/10 p-6 card hover-lift reveal" style="--reveal-delay:.05s">
+          <span class="text-sm text-muted">01</span>
+          <h3 class="text-lg font-semibold mb-2">Keşif & Brief</h3>
+          <p class="text-muted">Hedefler, rakipler, kapsam ve gereksinimler.</p>
+        </li>
+        <li class="rounded-xl border border-white/10 p-6 card hover-lift reveal" style="--reveal-delay:.1s">
+          <span class="text-sm text-muted">02</span>
+          <h3 class="text-lg font-semibold mb-2">Tasarım & Prototip</h3>
+          <p class="text-muted">Wireframe, görsel tasarım ve etkileşimli prototip.</p>
+        </li>
+        <li class="rounded-xl border border-white/10 p-6 card hover-lift reveal" style="--reveal-delay:.15s">
+          <span class="text-sm text-muted">03</span>
+          <h3 class="text-lg font-semibold mb-2">Geliştirme & Yayın</h3>
+          <p class="text-muted">Kodlama, test, içerik girişi ve canlıya alma.</p>
+        </li>
+      </ol>
+      
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16" id="get-started">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <a href="brief.html" class="btn btn-primary shadow-glow">Teklif Alın</a>
+      <a href="portfolio.html" class="btn btn-outline ml-3">Portföyü Gör</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-12 text-sm">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <div class="text-zinc-300">
+        <div class="text-lg font-semibold mb-3"><span class="brand"><em>pek</em> digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></div>
+        <p class="text-zinc-400">Modern ve hızlı web çözümleri. Mobil öncelikli tasarım, performans odaklı geliştirme.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6 text-zinc-400">
+        <div class="space-y-2">
+          <a href="index.html" class="block hover:text-white">Anasayfa</a>
+          <a href="services.html" class="block hover:text-white">Hizmetler</a>
+          <a href="portfolio.html" class="block hover:text-white">Portföy</a>
+          <a href="process.html" class="block hover:text-white">Süreç</a>
+        </div>
+        <div class="space-y-2">
+          <a href="brief.html" class="btn btn-primary w-full text-center">Teklif Alın</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 mt-8 text-zinc-500">ab digital — Web Tasarım Ajansı. © 2025 Tüm hakları saklıdır.</div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      const m = document.getElementById('mobileNav');
+      if (!m) return;
+      const willShow = m.classList.contains('hidden');
+      m.classList.toggle('hidden');
+      if (willShow) document.body.classList.add('overflow-hidden'); else document.body.classList.remove('overflow-hidden');
+    });
+    // Button ripple
+    document.addEventListener('click', function(e){
+      const btn = e.target.closest('.btn');
+      if(!btn) return;
+      const r = document.createElement('span');
+      const rect = btn.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      r.style.width = r.style.height = size + 'px';
+      r.style.left = (e.clientX - rect.left - size/2) + 'px';
+      r.style.top = (e.clientY - rect.top - size/2) + 'px';
+      r.className = 'ripple';
+      btn.appendChild(r);
+      setTimeout(()=> r.remove(), 600);
+    }, { passive: true });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('animate-in'); io.unobserve(e.target); } });
+    }, { threshold: .12 });
+    revealEls.forEach(el=> io.observe(el));
+
+    // Hover tilt effect
+    function attachTilt(el){
+      el.addEventListener('mousemove', (ev)=>{
+        const r = el.getBoundingClientRect();
+        const px = (ev.clientX - r.left) / r.width - 0.5;
+        const py = (ev.clientY - r.top) / r.height - 0.5;
+        const rx = (-py * 6).toFixed(2);
+        const ry = (px * 6).toFixed(2);
+        el.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      });
+      el.addEventListener('mouseleave', ()=>{ el.style.transform = ''; });
+    }
+    document.querySelectorAll('.hover-tilt').forEach(attachTilt);
+  </script>
+</body>
+</html>
