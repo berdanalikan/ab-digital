@@ -1,0 +1,14 @@
+{
+  "name": "pek digital",
+  "short_name": "pek",
+  "icons": [
+    {
+      "src": "/images/favicon/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#121212",
+  "background_color": "#121212",
+  "display": "standalone"
+}

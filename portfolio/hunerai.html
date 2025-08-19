@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ab digital — HunerAI • Proje Detayı</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{bg:'#0b0b0e',surface:'#111216',primary:'#ff3d00',accent:'#7c3aed'}}}};</script>
+  <style>
+    .btn{position:relative;display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.1rem;border-radius:.75rem;border:1px solid rgba(255,255,255,.08);transition:.2s ease}
+    .btn-primary{background:linear-gradient(135deg,#ff3d00,#ff6a33);color:#0b0b0e;border-color:transparent}
+    .reveal{opacity:0;transform:translateY(14px)}
+    .reveal.animate-in{opacity:1;transform:translateY(0);transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s ease-out;transition-delay:var(--reveal-delay,0s)}
+    .card-img{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+    .hover-lift:hover{transform:translateY(-6px) scale(1.02)}
+  </style>
+</head>
+<body class="bg-bg text-white antialiased">
+  <header class="sticky top-0 z-50 border-b border-white/5 bg-bg/70 backdrop-blur">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="../index.html" class="text-lg font-semibold tracking-tight" aria-label="ab digital ana sayfa">ab digital</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-300">
+        <a href="../index.html" class="hover:text-primary">Anasayfa</a>
+        <a href="../services.html" class="hover:text-primary">Hizmetler</a>
+        <a href="../portfolio.html" class="hover:text-primary text-primary">Portföy</a>
+        <a href="../process.html" class="hover:text-primary">Süreç</a>
+        <a href="../brief.html" class="btn btn-primary ml-2">Teklif Alın</a>
+      </nav>
+    </div>
+  </header>
+  <main class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <a href="../portfolio.html" class="text-sm text-zinc-400 hover:text-white">← Portföye Dön</a>
+      <h1 class="text-3xl md:text-4xl font-bold mt-4">HunerAI — Teknoloji Sitesi</h1>
+      <p class="text-zinc-400 mt-2 max-w-3xl">Ürün odaklı, modern arayüz. Aşağıda siteden alınmış ekran görüntüleri yer alıyor.</p>
+      <div class="mt-3 text-sm text-zinc-400">Kaynak: <a class="underline hover:text-white" href="https://hunerai.com" target="_blank" rel="noopener">hunerai.com</a></div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <figure class="rounded-xl overflow-hidden border border-white/10 bg-surface hover-lift reveal" style="--reveal-delay:.0s">
+          <img loading="lazy" decoding="async" fetchpriority="low" width="1400" height="933" class="w-full card-img" alt="HunerAI — Ana sayfa"
+               src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fhunerai.com?w=1400" />
+        </figure>
+        <figure class="rounded-xl overflow-hidden border border-white/10 bg-surface hover-lift reveal" style="--reveal-delay:.05s">
+          <img loading="lazy" decoding="async" fetchpriority="low" width="1400" height="933" class="w-full card-img" alt="HunerAI — Blog"
+               src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fhunerai.com%2Fblog?w=1400" />
+        </figure>
+        <figure class="rounded-xl overflow-hidden border border-white/10 bg-surface hover-lift reveal" style="--reveal-delay:.1s">
+          <img loading="lazy" decoding="async" fetchpriority="low" width="1400" height="933" class="w-full card-img" alt="HunerAI — İletişim"
+               src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fhunerai.com%2Fcontact?w=1400" />
+        </figure>
+      </div>
+    </div>
+  </main>
+  <footer class="border-t border-white/5 py-12 text-sm mt-16">
+    <div class="max-w-6xl mx-auto px-4 text-zinc-500">ab digital — © 2025</div>
+  </footer>
+  <script>
+    const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('animate-in');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
+
+
