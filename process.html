@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ab-digital — Süreç</title>
+  <title>pek-digital — Süreç</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config={theme:{extend:{colors:{bg:'#0b0b0e',surface:'#111216',primary:'#ff3d00',accent:'#7c3aed'}}}};</script>
   <style>
@@ -40,4 +40,68 @@
   </header>
   <div id="mobileNav" class="md:hidden hidden fixed top-16 inset-x-0 z-50 border-b border-white/5 bg-bg/95 backdrop-blur shadow-lg max-h-[80vh] overflow-y-auto">
     <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-2 text-sm text-zinc-300">
-      <a href="index.html" class="py-2 hover:text-primary"
+      <a href="index.html" class="py-2 hover:text-primary">Anasayfa</a>
+      <a href="services.html" class="py-2 hover:text-primary">Hizmetler</a>
+      <a href="portfolio.html" class="py-2 hover:text-primary">Portföy</a>
+      <a href="process.html" class="py-2 hover:text-primary">Süreç</a>
+      <a href="brief.html" class="btn btn-primary mt-2">Teklif Alın</a>
+    </div>
+  </div>
+
+  <main class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl font-bold mb-8">Süreç</h1>
+      <ol class="grid md:grid-cols-3 gap-6 list-decimal list-inside">
+        <li class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.05s">
+          <span class="text-sm text-zinc-400">01</span>
+          <h3 class="text-lg font-semibold mb-2">Keşif & Brief</h3>
+          <p class="text-zinc-400">Hedefler, rakipler, kapsam ve gereksinimler.</p>
+        </li>
+        <li class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.1s">
+          <span class="text-sm text-zinc-400">02</span>
+          <h3 class="text-lg font-semibold mb-2">Tasarım & Prototip</h3>
+          <p class="text-zinc-400">Wireframe, görsel tasarım, etkileşimli prototip ve testler.</p>
+        </li>
+        <li class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.15s">
+          <span class="text-sm text-zinc-400">03</span>
+          <h3 class="text-lg font-semibold mb-2">Geliştirme & Yayın</h3>
+          <p class="text-zinc-400">Kodlama, içerik girişi, QA ve canlıya alma.</p>
+        </li>
+      </ol>
+    </div>
+  </main>
+
+  <footer class="border-t border-white/5 py-12 text-sm mt-16">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <div class="text-zinc-300">
+        <div class="text-lg font-semibold mb-3"><span class="brand"><em class="brand-pek">pek</em> <span class="digital">digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></span></div>
+        <p class="text-zinc-400">Modern ve hızlı web çözümleri. Mobil öncelikli tasarım, performans odaklı geliştirme.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-6 text-zinc-400">
+        <div class="space-y-2">
+          <a href="index.html" class="block hover:text-white">Anasayfa</a>
+          <a href="services.html" class="block hover:text-white">Hizmetler</a>
+          <a href="portfolio.html" class="block hover:text-white">Portföy</a>
+          <a href="process.html" class="block hover:text-white">Süreç</a>
+        </div>
+        <div class="space-y-2">
+          <a href="brief.html" class="btn btn-primary w-full text-center">Teklif Alın</a>
+        </div>
+      </div>
+    </div>
+            <div class="max-w-6xl mx-auto px-4 mt-8 text-zinc-500">pek digital — Web Tasarım Ajansı. © 2025 Tüm hakları saklıdır.</div>
+  </footer>
+  <script>
+    // Mobile nav toggle
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      const m = document.getElementById('mobileNav'); if (!m) return; const willShow = m.classList.contains('hidden'); m.classList.toggle('hidden'); if (willShow) document.body.classList.add('overflow-hidden'); else document.body.classList.remove('overflow-hidden');
+    });
+    // Reveal on scroll for process
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('animate-in'); io.unobserve(e.target); } });
+    }, { threshold: .12 });
+    revealEls.forEach(el=> io.observe(el));
+  </script>
+</body>
+</html>

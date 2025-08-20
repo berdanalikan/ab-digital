@@ -55,4 +55,10 @@
             <div class="max-w-6xl mx-auto px-4 text-zinc-500">pek digital — © 2025</div>
   </footer>
   <script>
-    const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('animate-in')
+    const io = new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('animate-in');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
+
+
