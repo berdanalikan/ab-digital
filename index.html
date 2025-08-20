@@ -45,6 +45,8 @@
     .card-img{ transition: transform .6s cubic-bezier(.2,.8,.2,1) }
     .card:hover .card-img{ transform: scale(1.05) }
     .brand{ position:relative; display:inline-block }
+    .brand em{ font-style: italic; font-weight: 300 }
+    .brand .digital{ font-style: normal; font-weight: 700 }
     .l-wrap{ position:relative; display:inline-block }
     .brand-star{ position:absolute; top:-0.12em; right:-0.39em; color:#ff3d00; font-size:1.15em; line-height:1 }
     @media (prefers-reduced-motion: reduce) {
@@ -56,7 +58,7 @@
   <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-white/5 bg-bg/70 backdrop-blur">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="index.html" class="text-lg font-semibold tracking-tight" aria-label="pek digital ana sayfa"><span class="brand"><em>pek</em> digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></a>
+      <a href="index.html" class="text-lg font-semibold tracking-tight" aria-label="pek digital ana sayfa"><span class="brand"><em class="brand-pek">pek</em> <span class="digital">digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></span></a>
       <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-300">
         <a href="index.html" class="hover:text-primary">Anasayfa</a>
         <a href="services.html" class="hover:text-primary">Hizmetler</a>
@@ -165,7 +167,7 @@
   <footer class="border-t border-white/5 py-12 text-sm">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
       <div class="text-zinc-300">
-        <div class="text-lg font-semibold mb-3"><span class="brand"><em>pek</em> digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></div>
+        <div class="text-lg font-semibold mb-3"><span class="brand"><em class="brand-pek">pek</em> <span class="digital">digita<span class="l-wrap">l<span class="brand-star">*</span></span></span></span></div>
         <p class="text-zinc-400">Modern ve hızlı web çözümleri. Mobil öncelikli tasarım, performans odaklı geliştirme.</p>
       </div>
       <div class="grid grid-cols-2 gap-6 text-zinc-400">
