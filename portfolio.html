@@ -53,38 +53,86 @@
 
   <main class="py-16">
     <div class="max-w-6xl mx-auto px-4">
-      <h1 class="text-3xl md:text-4xl font-bold mb-8">Çalışmalarımız</h1>
-      <p class="text-zinc-400 mb-10">Seçtiğimiz bazı projelerden öne çıkan ekranlar ve detaylar.</p>
-      <div class="grid md:grid-cols-2 gap-6" id="portfolioGrid">
-        <a href="https://hunerai.com" target="_blank" rel="noopener" class="rounded-xl overflow-hidden border border-white/10 bg-surface card hover-lift reveal cv-auto block" style="--reveal-delay:.0s">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fhunerai.com?w=1200" alt="HunerAI — Teknoloji Sitesi (Ana sayfa)" class="w-full card-img" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="800"/>
-          <div class="p-5">
-            <h3 class="font-semibold">HunerAI — Teknoloji Sitesi</h3>
-            <p class="text-sm text-zinc-400">Ana sayfa görüntüsü</p>
-          </div>
-        </a>
-        <a href="https://www.jasminearthouse.com" target="_blank" rel="noopener" class="rounded-xl overflow-hidden border border-white/10 bg-surface card hover-lift reveal cv-auto block" style="--reveal-delay:.05s">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.jasminearthouse.com?w=1200" alt="Jasmine Art House — Sanat Galerisi (Ana sayfa)" class="w-full card-img" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="800"/>
-          <div class="p-5">
-            <h3 class="font-semibold">Jasmine Art House — Sanat Galerisi</h3>
-            <p class="text-sm text-zinc-400">Ana sayfa görüntüsü</p>
-          </div>
-        </a>
-        <a href="https://motokuryegelsin.com" target="_blank" rel="noopener" class="rounded-xl overflow-hidden border border-white/10 bg-surface card hover-lift reveal cv-auto block" style="--reveal-delay:.1s">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmotokuryegelsin.com?w=1200" alt="motokuryegelsin.com — Ana sayfa" class="w-full card-img" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="800"/>
-          <div class="p-5">
-            <h3 class="font-semibold">motokuryegelsin.com</h3>
-            <p class="text-sm text-zinc-400">Ana sayfa görüntüsü</p>
-          </div>
-        </a>
-        <a href="https://woodluck-tablecenter.vercel.app/" target="_blank" rel="noopener" class="rounded-xl overflow-hidden border border-white/10 bg-surface card hover-lift reveal cv-auto block" style="--reveal-delay:.15s">
-          <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwoodluck-tablecenter.vercel.app%2F?w=1200" alt="WorldClassWoods — Table Center (Ana sayfa)" class="w-full card-img" loading="lazy" decoding="async" fetchpriority="low" width="1200" height="800"/>
-          <div class="p-5">
-            <h3 class="font-semibold">WorldClassWoods — Table Center</h3>
-            <p class="text-sm text-zinc-400">Ana sayfa görüntüsü</p>
-          </div>
-        </a>
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Portföyümüz</h1>
+        <p class="text-xl text-zinc-400 mb-8">Başarıyla tamamladığımız projeler ve dijital çözümler</p>
       </div>
+
+      <!-- Proje Kartları - Çapraz Düzen -->
+      <div class="relative">
+        <div class="flex flex-col space-y-12 md:space-y-16">
+          <!-- First row - left aligned (HunerAI) -->
+          <div class="flex justify-start">
+            <div class="w-full md:w-5/6 lg:w-4/5 rounded-xl overflow-hidden border border-white/10 bg-surface card hover-lift reveal" style="--reveal-delay:.0s">
+              <div class="relative">
+                <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fhunerai.com?w=1200" alt="HunerAI — Teknoloji Sitesi" class="w-full h-64 md:h-80 object-cover card-img" loading="lazy"/>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full border border-primary/30">Teknoloji</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-3">HunerAI — Teknoloji Sitesi</h3>
+                <p class="text-zinc-400 mb-6">Modern teknoloji blogu ve AI haberleri için geliştirilmiş responsive web sitesi. Hızlı yükleme ve SEO optimizasyonu ile öne çıkıyor.</p>
+                <a href="https://hunerai.com" target="_blank" rel="noopener" class="text-primary hover:text-primary/80 underline decoration-primary/50 hover:decoration-primary transition-colors">Canlı Siteyi Gör</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Second row - right aligned (Jasmine Art House) -->
+          <div class="flex justify-end">
+            <div class="w-full md:w-5/6 lg:w-4/5 rounded-xl overflow-hidden border border-white/10 bg-surface card hover-lift reveal" style="--reveal-delay:.05s">
+              <div class="relative">
+                <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwww.jasminearthouse.com?w=1200" alt="Jasmine Art House — Sanat Galerisi" class="w-full h-64 md:h-80 object-cover card-img" loading="lazy"/>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full border border-primary/30">Sanat</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-3">Jasmine Art House — Sanat Galerisi</h3>
+                <p class="text-zinc-400 mb-6">Elit sanat galerisi için tasarlanmış premium web sitesi. Görsel odaklı tasarım ve sanat eserlerini öne çıkaran kullanıcı deneyimi.</p>
+                <a href="https://www.jasminearthouse.com" target="_blank" rel="noopener" class="text-primary hover:text-primary/80 underline decoration-primary/50 hover:decoration-primary transition-colors">Canlı Siteyi Gör</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Third row - left aligned (MotoKurye) -->
+          <div class="flex justify-start">
+            <div class="w-full md:w-5/6 lg:w-4/5 rounded-xl overflow-hidden border border-white/10 bg-surface card hover-lift reveal" style="--reveal-delay:.1s">
+              <div class="relative">
+                <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmotokuryegelsin.com?w=1200" alt="MotoKurye Gelsin" class="w-full h-64 md:h-80 object-cover card-img" loading="lazy"/>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full border border-primary/30">Hizmet</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-3">MotoKurye Gelsin</h3>
+                <p class="text-zinc-400 mb-6">Hızlı kurye hizmeti için geliştirilmiş kurumsal web sitesi. Müşteri memnuniyeti odaklı tasarım ve kolay iletişim imkanları.</p>
+                <a href="https://motokuryegelsin.com" target="_blank" rel="noopener" class="text-primary hover:text-primary/80 underline decoration-primary/50 hover:decoration-primary transition-colors">Canlı Siteyi Gör</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Fourth row - right aligned (WorldClassWoods) -->
+          <div class="flex justify-end">
+            <div class="w-full md:w-5/6 lg:w-4/5 rounded-xl overflow-hidden border border-white/10 bg-surface card hover-lift reveal" style="--reveal-delay:.15s">
+              <div class="relative">
+                <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fwoodluck-tablecenter.vercel.app%2F?w=1200" alt="WorldClassWoods — Table Center" class="w-full h-64 md:h-80 object-cover card-img" loading="lazy"/>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full border border-primary/30">E-ticaret</span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-3">WorldClassWoods — Table Center</h3>
+                <p class="text-zinc-400 mb-6">Premium ahşap ürünleri için geliştirilmiş e-ticaret platformu. Modern tasarım ve kullanıcı dostu alışveriş deneyimi.</p>
+                <a href="https://woodluck-tablecenter.vercel.app/" target="_blank" rel="noopener" class="text-primary hover:text-primary/80 underline decoration-primary/50 hover:decoration-primary transition-colors">Canlı Siteyi Gör</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </main>
 

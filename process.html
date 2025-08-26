@@ -50,24 +50,85 @@
 
   <main class="py-16">
     <div class="max-w-6xl mx-auto px-4">
-      <h1 class="text-3xl md:text-4xl font-bold mb-8">Süreç</h1>
-      <ol class="grid md:grid-cols-3 gap-6 list-decimal list-inside">
-        <li class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.05s">
-          <span class="text-sm text-zinc-400">01</span>
-          <h3 class="text-lg font-semibold mb-2">Keşif & Brief</h3>
-          <p class="text-zinc-400">Hedefler, rakipler, kapsam ve gereksinimler.</p>
-        </li>
-        <li class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.1s">
-          <span class="text-sm text-zinc-400">02</span>
-          <h3 class="text-lg font-semibold mb-2">Tasarım & Prototip</h3>
-          <p class="text-zinc-400">Wireframe, görsel tasarım, etkileşimli prototip ve testler.</p>
-        </li>
-        <li class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.15s">
-          <span class="text-sm text-zinc-400">03</span>
-          <h3 class="text-lg font-semibold mb-2">Geliştirme & Yayın</h3>
-          <p class="text-zinc-400">Kodlama, içerik girişi, QA ve canlıya alma.</p>
-        </li>
-      </ol>
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Çalışma Sürecimiz</h1>
+        <p class="text-xl text-zinc-400 mb-8">Projelerinizi hayata geçirirken izlediğimiz adım adım yolculuk</p>
+      </div>
+
+      <!-- Timeline with Connected Steps -->
+      <div class="relative">
+
+        
+        <!-- Timeline Steps -->
+        <div class="space-y-16 md:space-y-20">
+          <!-- Step 1: Keşif & Brief -->
+          <div class="relative flex flex-col md:flex-row items-center md:items-start reveal" style="--reveal-delay:.05s">
+            <!-- Step Circle -->
+            <div class="relative z-10 w-16 h-16 bg-primary rounded-full flex items-center justify-center border-4 border-bg shadow-lg mb-6 md:mb-0">
+              <span class="text-xl font-bold text-bg">01</span>
+            </div>
+            
+            <!-- Step Content -->
+            <div class="md:ml-8 text-center md:text-left md:w-1/2">
+              <div class="bg-surface/60 rounded-xl border border-white/10 p-6 card hover-lift relative" style="z-index: 10;">
+                <h3 class="text-2xl font-bold mb-4 text-primary">Keşif & Brief</h3>
+                <p class="text-zinc-400 text-lg leading-relaxed">Projenizin temellerini atıyoruz. Hedeflerinizi, rakiplerinizi, hedef kitlenizi ve proje kapsamını detaylı olarak analiz ediyoruz. Bu aşamada projenizin başarı kriterlerini belirliyor ve yol haritasını çiziyoruz.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Tasarım & Prototip -->
+          <div class="relative flex flex-col md:flex-row-reverse items-center md:items-start reveal" style="--reveal-delay:.1s">
+            <!-- Step Circle -->
+            <div class="relative z-10 w-16 h-16 bg-primary rounded-full flex items-center justify-center border-4 border-bg shadow-lg mb-6 md:mb-0">
+              <span class="text-xl font-bold text-bg">02</span>
+            </div>
+            
+            <!-- Step Content -->
+            <div class="md:mr-8 text-center md:text-right md:w-1/2">
+              <div class="bg-surface/60 rounded-xl border border-white/10 p-6 card hover-lift relative" style="z-index: 10;">
+                <h3 class="text-2xl font-bold mb-4 text-primary">Tasarım & Prototip</h3>
+                <p class="text-zinc-400 text-lg leading-relaxed">Kullanıcı deneyimi odaklı tasarım sürecine başlıyoruz. Wireframe'ler, görsel tasarımlar ve etkileşimli prototipler oluşturuyoruz. Her aşamada sizinle test ediyor ve geri bildirimlerinize göre iyileştirmeler yapıyoruz.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Geliştirme & Yayın -->
+          <div class="relative flex flex-col md:flex-row items-center md:items-start reveal" style="--reveal-delay:.15s">
+            <!-- Step Circle -->
+            <div class="relative z-10 w-16 h-16 bg-primary rounded-full flex items-center justify-center border-4 border-bg shadow-lg mb-6 md:mb-0">
+              <span class="text-xl font-bold text-bg">03</span>
+            </div>
+            
+            <!-- Step Content -->
+            <div class="md:ml-8 text-center md:text-left md:w-1/2">
+              <div class="bg-surface/60 rounded-xl border border-white/10 p-6 card hover-lift relative" style="z-index: 10;">
+                <h3 class="text-2xl font-bold mb-4 text-primary">Geliştirme & Yayın</h3>
+                <p class="text-zinc-400 text-lg leading-relaxed">Tasarımları kodlara dönüştürüyoruz. Modern teknolojiler kullanarak performanslı ve güvenli web siteleri geliştiriyoruz. Kapsamlı testler sonrası projenizi canlıya alıyor ve sürekli destek sağlıyoruz.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final Success Step -->
+          <div class="relative flex flex-col md:flex-row-reverse items-center md:items-start reveal" style="--reveal-delay:.2s">
+            <!-- Success Circle -->
+            <div class="relative z-10 w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center border-4 border-bg shadow-lg mb-6 md:mb-0">
+              <svg class="w-8 h-8 text-bg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            
+            <!-- Success Content -->
+            <div class="md:mr-8 text-center md:text-right md:w-1/2">
+              <div class="bg-surface/60 rounded-xl border border-white/10 p-6 card hover-lift relative" style="z-index: 10;">
+                <h3 class="text-2xl font-bold mb-4 text-primary">Başarı & Destek</h3>
+                <p class="text-zinc-400 text-lg leading-relaxed">Projeniz başarıyla tamamlandı! Artık dijital dünyada yerinizi aldınız. 7/24 teknik destek ve sürekli güncellemeler ile projenizin her zaman en iyi performansta çalışmasını sağlıyoruz.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 

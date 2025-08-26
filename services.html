@@ -48,25 +48,75 @@
     </div>
   </div>
 
+  <!-- Banner Image -->
+  <section class="relative w-full bg-black overflow-hidden">
+    <div class="w-full">
+      <div class="relative w-full h-screen md:aspect-video">
+        <img 
+          src="https://cdn.cosmos.so/7273db45-bdca-416b-9abf-8d09f32c2178?format=jpeg"
+          alt="Pek Digital Hizmetler Banner"
+          class="w-full h-full object-cover"
+        />
+        <!-- Banner overlay with text -->
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <div class="text-center text-white px-4">
+            <h2 class="text-3xl md:text-6xl font-bold mb-4">Hizmetlerimiz</h2>
+            <p class="text-xl md:text-2xl text-zinc-200">Modern ve etkileyici dijital çözümler</p>
+          </div>
+        </div>
+        <!-- Smooth transition overlay at top -->
+        <div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-bg to-transparent"></div>
+        <!-- Smooth transition overlay at bottom -->
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-bg to-transparent"></div>
+      </div>
+    </div>
+  </section>
+
   <main class="py-16">
     <div class="max-w-6xl mx-auto px-4">
       <h1 class="text-3xl md:text-4xl font-bold mb-8">Hizmetlerimiz</h1>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.0s">
-          <h3 class="text-xl font-semibold mb-2">Web Tasarım & Geliştirme</h3>
-          <p class="text-zinc-400">Mobil öncelikli arayüzler, performans ve SEO odaklı geliştirme.</p>
-        </div>
-        <div class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.05s">
-          <h3 class="text-xl font-semibold mb-2">UI/UX & Bilgi Mimarisi</h3>
-          <p class="text-zinc-400">Araştırma, wireframe, prototip ve kullanıcı testleri.</p>
-        </div>
-        <div class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.1s">
-          <h3 class="text-xl font-semibold mb-2">E‑ticaret & Entegrasyonlar</h3>
-          <p class="text-zinc-400">Ödeme, CRM, analitik ve pazarlama entegrasyonları.</p>
-        </div>
-        <div class="rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.15s">
-          <h3 class="text-xl font-semibold mb-2">Marka & İçerik</h3>
-          <p class="text-zinc-400">Ton‑of‑voice, görsel dil ve içerik stratejisi.</p>
+      <div class="relative">
+        <!-- Diagonal layout container -->
+        <div class="flex flex-col space-y-8 md:space-y-12">
+          <!-- First row - left aligned -->
+          <div class="flex justify-start">
+            <div class="w-full md:w-5/6 lg:w-4/5 rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.0s">
+              <h3 class="text-xl font-semibold mb-3">Web Tasarım & Geliştirme</h3>
+              <p class="text-zinc-400 mb-2">Mobil öncelikli, responsive tasarım prensipleriyle modern ve kullanıcı dostu arayüzler geliştiriyoruz.</p>
+              <p class="text-zinc-400 mb-2">Next.js, React ve TailwindCSS teknolojileri kullanarak hızlı, SEO uyumlu ve performans odaklı web siteleri oluşturuyoruz.</p>
+              <p class="text-zinc-400">Her projede accessibility standartlarına uygun, cross-browser uyumlu ve mobil cihazlarda mükemmel çalışan çözümler sunuyoruz.</p>
+            </div>
+          </div>
+          
+          <!-- Second row - right aligned -->
+          <div class="flex justify-end">
+            <div class="w-full md:w-5/6 lg:w-4/5 rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.05s">
+              <h3 class="text-xl font-semibold mb-3">UI/UX & Bilgi Mimarisi</h3>
+              <p class="text-zinc-400 mb-2">Kapsamlı kullanıcı araştırması, persona analizi ve hedef kitle ihtiyaçlarını belirleyerek etkili tasarım stratejileri geliştiriyoruz.</p>
+              <p class="text-zinc-400 mb-2">Wireframe, mockup ve interaktif prototipler ile kullanıcı deneyimini önceden test edip, sürekli iyileştirme süreçleri yürütüyoruz.</p>
+              <p class="text-zinc-400">Bilgi mimarisi, navigasyon yapısı ve içerik organizasyonu ile kullanıcıların siteyi kolayca keşfetmesini sağlıyoruz.</p>
+            </div>
+          </div>
+          
+          <!-- Third row - left aligned -->
+          <div class="flex justify-start">
+            <div class="w-full md:w-5/6 lg:w-4/5 rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.1s">
+              <h3 class="text-xl font-semibold mb-3">E‑ticaret & Entegrasyonlar</h3>
+              <p class="text-zinc-400 mb-2">Güvenli ödeme sistemleri, kargo entegrasyonları ve stok yönetimi ile tam fonksiyonel e-ticaret platformları kuruyoruz.</p>
+              <p class="text-zinc-400 mb-2">CRM sistemleri, email marketing araçları ve sosyal medya entegrasyonları ile müşteri ilişkilerini güçlendiriyoruz.</p>
+              <p class="text-zinc-400">Google Analytics, heatmap analizi ve A/B testleri ile satış performansını sürekli optimize edip, dönüşüm oranlarını artırıyoruz.</p>
+            </div>
+          </div>
+          
+          <!-- Fourth row - right aligned -->
+          <div class="flex justify-end">
+            <div class="w-full md:w-5/6 lg:w-4/5 rounded-xl border border-white/10 p-6 bg-surface/60 card hover-lift reveal" style="--reveal-delay:.15s">
+              <h3 class="text-xl font-semibold mb-3">Marka & İçerik</h3>
+              <p class="text-zinc-400 mb-2">Markanızın benzersiz kimliğini yansıtan, tutarlı ton-of-voice ve görsel dil stratejileri geliştiriyoruz.</p>
+              <p class="text-zinc-400 mb-2">SEO uyumlu, değer odaklı içerik üretimi ile hedef kitlenizi bilgilendirip, marka farkındalığınızı artırıyoruz.</p>
+              <p class="text-zinc-400">Sosyal medya stratejileri, blog yönetimi ve influencer işbirlikleri ile markanızın dijital varlığını güçlendiriyoruz.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
